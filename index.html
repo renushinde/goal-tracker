@@ -15,15 +15,15 @@
   <body>
     <h1 class="title">Stuff I need to do</h1>
 
-    <div class="all-tasks">
+     <!-- <div class="all-tasks">
       <h2 class="task-list-title">My Goals</h2>
       <ul class="task-list">
-        <li class="list-name active-list">React</li>
+         <li class="list-name active-list">React</li>
         <li class="list-name">Data Structures and Algorithms</li>
         <li class="list-name">Practice interviews</li>
       </ul>
 
-      <form action="">
+      <form action="/dogs" id="goal_form">
         <input 
           type="text"
           class="new list"
@@ -32,7 +32,28 @@
         />
         <button class="btn create" aria-label="create new list">+</button>
       </form>
-    </div>
+    </div>  -->
+
+     <fieldset>
+        <legend class="task-list-title">Goals that I need to work on</legend>
+        <input
+          id="inpKey" 
+          type="text"
+          placeholder="add new goal"
+          aria-label="new list name"
+        />
+        <button type="button" id="btnInsert">New Goal</button>
+        <button type="button" id="btnRemove">Remove Goal</button>
+        <ul id="task_list">
+
+        </ul>
+    </fieldset>
+       <!--  <ul id="task_list">
+
+        </ul> -->
+    <!-- <div id="isOutput">
+
+    </div> -->
 
     <div class="todo-list">
       <div class="todo-header">
@@ -100,5 +121,6 @@
 
    
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
