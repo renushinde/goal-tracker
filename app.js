@@ -35,15 +35,17 @@ btnInsert.onclick = function() {
     }
 }
 
-for (let i = 0; i < localStorage.length; i++) {
+ for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
-    task_list.innerHTML += `${key}<br />`
+    task_list.innerHTML += `<div> ${key}</div>`
 }
 
-task_list.onclick = function() { 
+task_list.onclick = function(e) { 
     for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
+    if( key == e.target.innerText){
     window.localStorage.removeItem(key);
-    task_list.innerHTML = key; 
+    e.target.remove();
     } 
 }
+} 
